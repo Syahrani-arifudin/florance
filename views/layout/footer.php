@@ -2,7 +2,7 @@
     </div>
   </div>
 
-  <footer class="text-center py-4 mt-5">
+  <footer class="py-4 mt-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 text-md-start">
@@ -18,20 +18,22 @@
           </p>
         </div>
       </div>
+      
       <hr class="my-3 opacity-25">
+      
       <div class="row">
         <div class="col-12">
           <div class="d-flex justify-content-center gap-3">
-            <a href="#" class="text-white-50 text-decoration-none">
+            <a href="#" class="text-white-50 text-decoration-none fs-5">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="text-white-50 text-decoration-none">
+            <a href="#" class="text-white-50 text-decoration-none fs-5">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="text-white-50 text-decoration-none">
+            <a href="#" class="text-white-50 text-decoration-none fs-5">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="text-white-50 text-decoration-none">
+            <a href="#" class="text-white-50 text-decoration-none fs-5">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -43,9 +45,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
-    // Add smooth scrolling and interactive effects
+    // Add smooth animation on page load
     document.addEventListener('DOMContentLoaded', function() {
-      // Add animation to cards on scroll
       const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -60,12 +61,11 @@
         });
       }, observerOptions);
       
-      // Observe all cards
-      document.querySelectorAll('.card, .main-content').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease';
-        observer.observe(card);
+      document.querySelectorAll('.main-content').forEach(content => {
+        content.style.opacity = '0';
+        content.style.transform = 'translateY(20px)';
+        content.style.transition = 'all 0.6s ease';
+        observer.observe(content);
       });
     });
   </script>

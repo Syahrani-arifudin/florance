@@ -1,28 +1,89 @@
+<?php include_once __DIR__ . '/../layout/header.php'; ?>
 
-<h2>Tambah Event Baru</h2>
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="d-flex align-items-center mb-4">
+      <a href="index.php?url=AdminController/index" class="btn btn-outline-secondary rounded-circle me-3">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <h2 class="mb-0 fw-bold text-primary">
+        <i class="fas fa-plus-circle me-2"></i>
+        Tambah Event Baru
+      </h2>
+    </div>
 
-<form action="index.php?url=AdminController/store" method="post">
-    <label>Nama Event:</label><br>
-    <input type="text" name="name" required><br><br>
+    <div class="card border-0 shadow-sm rounded-3">
+      <div class="card-header bg-gradient text-white py-3" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+        <h5 class="card-title mb-0 text-center">
+          <i class="fas fa-calendar-plus me-2"></i>
+          Form Event Baru
+        </h5>
+      </div>
+      
+      <div class="card-body p-4">
+        <form action="index.php?url=AdminController/store" method="post">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">
+              <i class="fas fa-tag text-primary me-2"></i>
+              Nama Event
+            </label>
+            <input type="text" class="form-control form-control-lg rounded-pill" id="name" name="name" required placeholder="Masukkan nama event">
+          </div>
 
-    <label>Tanggal:</label><br>
-    <input type="date" name="date" required><br><br>
+          <div class="mb-3">
+            <label for="date" class="form-label fw-semibold">
+              <i class="fas fa-calendar-alt text-success me-2"></i>
+              Tanggal Event
+            </label>
+            <input type="date" class="form-control form-control-lg rounded-pill" id="date" name="date" required>
+          </div>
 
-    <label>Lokasi:</label><br>
-    <input type="text" name="location" required><br><br>
+          <div class="mb-3">
+            <label for="location" class="form-label fw-semibold">
+              <i class="fas fa-map-marker-alt text-danger me-2"></i>
+              Lokasi Event
+            </label>
+            <input type="text" class="form-control form-control-lg rounded-pill" id="location" name="location" required placeholder="Masukkan lokasi event">
+          </div>
 
-    <label>Nama Band:</label><br>
-    <input type="text" name="band"><br><br>
+          <div class="mb-3">
+            <label for="band" class="form-label fw-semibold">
+              <i class="fas fa-users text-warning me-2"></i>
+              Nama Band
+            </label>
+            <input type="text" class="form-control form-control-lg rounded-pill" id="band" name="band" placeholder="Masukkan nama band (opsional)">
+          </div>
 
-    <label>Daftar Lagu (boleh lebih dari satu baris):</label><br>
-    <textarea name="songs" rows="4" cols="40"></textarea><br><br>
+          <div class="mb-3">
+            <label for="songs" class="form-label fw-semibold">
+              <i class="fas fa-music text-info me-2"></i>
+              Daftar Lagu
+            </label>
+            <textarea class="form-control form-control-lg rounded-3" id="songs" name="songs" rows="4" placeholder="Masukkan daftar lagu (satu lagu per baris)"></textarea>
+          </div>
 
-    <label>Link YouTube Lagu:</label><br>
-    <input type="text" name="youtube"><br><br>
+          <div class="mb-4">
+            <label for="youtube" class="form-label fw-semibold">
+              <i class="fab fa-youtube text-danger me-2"></i>
+              Link YouTube
+            </label>
+            <input type="url" class="form-control form-control-lg rounded-pill" id="youtube" name="youtube" placeholder="https://www.youtube.com/watch?v=...">
+          </div>
 
-    <button type="submit">Simpan</button>
-    <a href="index.php?url=AdminController/index"><button>batal</button></a>
-</form>
-<p><a href="index.php?url=AdminController/index">Kembali ke Daftar Event</a></p>
-<link rel="stylesheet" href="aset/style.css"> 
+          <div class="d-flex gap-3 justify-content-end">
+            <a href="index.php?url=AdminController/index" class="btn btn-outline-secondary btn-lg rounded-pill">
+              <i class="fas fa-times me-2"></i>
+              Batal
+            </a>
+            <button type="submit" class="btn btn-primary btn-lg rounded-pill">
+              <i class="fas fa-save me-2"></i>
+              Simpan Event
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php include_once __DIR__ . '/../layout/footer.php'; ?>
