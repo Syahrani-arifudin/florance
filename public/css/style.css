@@ -18,3 +18,77 @@
   border-radius: 50px;
   padding-left: 1rem;
 }
+
+/* === Header Styling === */
+:root {
+      --primary-color: #8b5cf6;
+      --secondary-color: #a855f7;
+      --accent-color: #c084fc;
+      --dark-color: #1f2937;
+      --light-color: #f8fafc;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(45deg, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      color: var(--dark-color) !important;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 8px 16px !important;
+    }
+    
+    .nav-link:hover {
+      background: linear-gradient(45deg, #8b5cf6, #ec4899);
+      color: white !important;
+      transform: translateY(-2px);
+    }
+    
+    .btn-logout {
+      background: linear-gradient(45deg, #ef4444, #dc2626);
+      border: none;
+      color: white;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-logout:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+      color: white;
+    }
+    
+    .main-content {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    
+    .content-wrapper {
+      padding: 2.5rem;
+    }

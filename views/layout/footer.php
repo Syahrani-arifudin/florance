@@ -1,12 +1,73 @@
-  </main>
+</div>
+    </div>
+  </div>
 
-  <footer class="bg-light text-center text-muted py-4 border-top mt-5">
+  <footer class="text-center py-4 mt-5">
     <div class="container">
-      <p class="mb-1">&copy; <?= date('Y') ?> Florence</p>
-      <small>Built with Bootstrap 5 | Designed by Team Florence</small>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+            <i class="fas fa-music text-white me-2"></i>
+            <span class="text-white fw-bold">Florence</span>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <p class="mb-0 text-white-50">
+            &copy; <?= date('Y') ?> Florence Event Management. 
+            <span class="text-white">Built with ❤️</span>
+          </p>
+        </div>
+      </div>
+      <hr class="my-3 opacity-25">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white-50 text-decoration-none">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-white-50 text-decoration-none">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-white-50 text-decoration-none">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-white-50 text-decoration-none">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Add smooth scrolling and interactive effects
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add animation to cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all cards
+      document.querySelectorAll('.card, .main-content').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
 </body>
 </html>
